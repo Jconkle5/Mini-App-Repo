@@ -2,8 +2,17 @@ import express from 'express'
 
 const app = express()
 
+const PORT = process.env.PORT || 3000;
+
 app.get('/', (req, res) => {
-  res.send('Hello Express')
+  res.send('Hello Express ft. Nodemon.rs')
+})
+// Middleware or API
+// Send HTML File
+
+
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`)
 })
 
-app.listen(3000)
+//TODO: Refactort to use env port.

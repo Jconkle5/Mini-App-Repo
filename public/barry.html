@@ -9,6 +9,18 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <h1 href="/">Home</h1>
+    <!-- <p>{{myVar}}</p> -->
+
+
+    <script>
+        fetch('/api/barry')
+        .then(response => response.json())
+        .then(data => {
+            document.body.innerHTML += `<p>API says: ${data.myVar}</p>`;
+        })
+        .catch(err => {
+            document.body.innerHTML += `<p>Error fetching API</p>`;
+        });
+    </script>
 </body>
 </html>

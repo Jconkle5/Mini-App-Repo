@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import 'dotenv/config';
 
-
+const JWT_SECRET="super-secret-key-for-demo-only";
 
 const app = express()
 const PORT = process.env.PORT || 3000;
